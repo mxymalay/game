@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🐣 小鸡下蛋</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header>
+      <h1>🐣 小鸡下蛋</h1>
+      <p class="subtitle">按住 <kbd>空格键</kbd> 让小鸡下蛋！</p>
+    </header>
+
+    <!-- Main layout: sidebar + game -->
+    <div id="main-layout">
+
+      <!-- Left sidebar: selection panels -->
+      <div class="selection-area">
+        <div class="selection-panel" id="chicken-panel">
+          <h2>🐔 选择小鸡</h2>
+          <div class="selection-grid" id="chicken-grid"></div>
+        </div>
+        <div class="selection-panel" id="egg-panel">
+          <h2>🥚 选择蛋的种类</h2>
+          <div class="selection-grid" id="egg-grid"></div>
+        </div>
+      </div>
+
+      <!-- Right: main game -->
+      <div>
+        <div id="game-area">
+          <div id="ground"></div>
+          <div id="chicken-container">
+            <div id="chicken-display" class="idle">
+              <div id="chicken-emoji">🐔</div>
+            </div>
+            <div id="drop-zone"></div>
+          </div>
+
+          <!-- HUD -->
+          <div id="hud">
+            <div class="hud-item">
+              <span class="hud-label">已下的蛋</span>
+              <span id="egg-count" class="hud-value">0</span>
+            </div>
+            <div class="hud-item">
+              <span class="hud-label">连击</span>
+              <span id="combo" class="hud-value">x1</span>
+            </div>
+            <div class="hud-item">
+              <span class="hud-label">最高连击</span>
+              <span id="best-combo" class="hud-value">x1</span>
+            </div>
+            <div class="hud-item">
+              <span class="hud-label">当前速度</span>
+              <span id="speed-label" class="hud-value">-</span>
+            </div>
+          </div>
+          <div id="status-msg">按住空格键开始！</div>
+        </div>
+
+        <!-- Egg basket -->
+        <div id="basket-area">
+          <div id="basket-title">🧺 蛋篓 <span id="basket-count"></span></div>
+          <div id="basket"></div>
+        </div>
+      </div>
+
+    </div><!-- end main-layout -->
+  </div>
+
+  <!-- Screen flash overlay -->
+  <div id="flash-overlay"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
