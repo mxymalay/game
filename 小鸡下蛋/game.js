@@ -4,70 +4,70 @@
 
 // ── 小鸡数据（12种）────────────────────────────────────────
 const CHICKENS = [
-  { id: 'normal',   emoji: '🐔', name: '普通鸡',   color: '#ffcd3c', speed: 600 },
-  { id: 'chick',    emoji: '🐤', name: '小黄鸡',   color: '#ffe066', speed: 420 },
-  { id: 'rooster',  emoji: '🐓', name: '大公鸡',   color: '#ff7eb3', speed: 750 },
-  { id: 'hatching', emoji: '🐣', name: '破壳鸡',   color: '#a0e4b0', speed: 370 },
-  { id: 'eagle',    emoji: '🦅', name: '神鹰',     color: '#7ee8fa', speed: 310 },
-  { id: 'penguin',  emoji: '🐧', name: '企鹅',     color: '#b094ee', speed: 820 },
-  { id: 'owl',      emoji: '🦉', name: '猫头鹰',   color: '#d4a0ff', speed: 680 },
-  { id: 'flamingo', emoji: '🦩', name: '火烈鸟',   color: '#ff8fa8', speed: 500 },
-  { id: 'parrot',   emoji: '🦜', name: '鹦鹉',     color: '#4de6a8', speed: 350 },
-  { id: 'duck',     emoji: '🦆', name: '小鸭子',   color: '#ffe0a0', speed: 560 },
-  { id: 'turkey',   emoji: '🦃', name: '火鸡',     color: '#ff9966', speed: 900 },
-  { id: 'phoenix',  emoji: '🔥', name: '凤凰',     color: '#ff4444', speed: 220 },
+  { id: 'normal', emoji: '🐔', name: '普通鸡', color: '#ffcd3c', speed: 600 },
+  { id: 'chick', emoji: '🐤', name: '小黄鸡', color: '#ffe066', speed: 420 },
+  { id: 'rooster', emoji: '🐓', name: '大公鸡', color: '#ff7eb3', speed: 750 },
+  { id: 'hatching', emoji: '🐣', name: '破壳鸡', color: '#a0e4b0', speed: 370 },
+  { id: 'eagle', emoji: '🦅', name: '神鹰', color: '#7ee8fa', speed: 310 },
+  { id: 'penguin', emoji: '🐧', name: '企鹅', color: '#b094ee', speed: 820 },
+  { id: 'owl', emoji: '🦉', name: '猫头鹰', color: '#d4a0ff', speed: 680 },
+  { id: 'flamingo', emoji: '🦩', name: '火烈鸟', color: '#ff8fa8', speed: 500 },
+  { id: 'parrot', emoji: '🦜', name: '鹦鹉', color: '#4de6a8', speed: 350 },
+  { id: 'duck', emoji: '🦆', name: '小鸭子', color: '#ffe0a0', speed: 560 },
+  { id: 'turkey', emoji: '🦃', name: '火鸡', color: '#ff9966', speed: 900 },
+  { id: 'phoenix', emoji: '🔥', name: '凤凰', color: '#ff4444', speed: 220 },
 ];
 
 // ── 蛋数据（14种）──────────────────────────────────────────
 const EGGS = [
-  { id: 'egg',        emoji: '🥚', name: '白鸡蛋',   burst: ['✨','💫'],       trail: '✨' },
-  { id: 'fried',      emoji: '🍳', name: '荷包蛋',   burst: ['🔥','💥'],       trail: '🌡️' },
-  { id: 'dino',       emoji: '🦕', name: '恐龙蛋',   burst: ['🦖','🌿'],       trail: '🌿' },
-  { id: 'golden',     emoji: '🌟', name: '金蛋',     burst: ['💰','✨','💎'],   trail: '💫' },
-  { id: 'chocolate',  emoji: '🍫', name: '巧克力蛋', burst: ['🍬','❤️'],       trail: '🍬' },
-  { id: 'rainbow',    emoji: '🌈', name: '彩虹蛋',   burst: ['🦄','🎆','🌈'], trail: '🌈' },
-  { id: 'alien',      emoji: '👽', name: '外星蛋',   burst: ['🛸','⚡','🔮'],  trail: '⚡' },
-  { id: 'bomb',       emoji: '💣', name: '炸弹蛋',   burst: ['💥','🔥','💢'],  trail: '💥' },
-  { id: 'crystal',    emoji: '💎', name: '水晶蛋',   burst: ['💠','🔷','✨'],  trail: '💠' },
-  { id: 'moon',       emoji: '🌙', name: '月亮蛋',   burst: ['⭐','🌟','✨'],  trail: '⭐' },
-  { id: 'dragon',     emoji: '🐲', name: '龙蛋',     burst: ['🔥','💥','🐉'],  trail: '🔥' },
-  { id: 'poison',     emoji: '☠️', name: '毒蛋',     burst: ['💀','🟢','💚'],  trail: '🟢' },
-  { id: 'ice',        emoji: '🧊', name: '冰蛋',     burst: ['❄️','🌨️','💙'], trail: '❄️' },
-  { id: 'magic',      emoji: '🔮', name: '魔法蛋',   burst: ['✨','🌀','⚡'],  trail: '🌀' },
+  { id: 'egg', emoji: '🥚', name: '白鸡蛋', burst: ['✨', '💫'], trail: '✨' },
+  { id: 'fried', emoji: '🍳', name: '荷包蛋', burst: ['🔥', '💥'], trail: '🌡️' },
+  { id: 'dino', emoji: '🦕', name: '恐龙蛋', burst: ['🦖', '🌿'], trail: '🌿' },
+  { id: 'golden', emoji: '🌟', name: '金蛋', burst: ['💰', '✨', '💎'], trail: '💫' },
+  { id: 'chocolate', emoji: '🍫', name: '巧克力蛋', burst: ['🍬', '❤️'], trail: '🍬' },
+  { id: 'rainbow', emoji: '🌈', name: '彩虹蛋', burst: ['🦄', '🎆', '🌈'], trail: '🌈' },
+  { id: 'alien', emoji: '👽', name: '外星蛋', burst: ['🛸', '⚡', '🔮'], trail: '⚡' },
+  { id: 'bomb', emoji: '💣', name: '炸弹蛋', burst: ['💥', '🔥', '💢'], trail: '💥' },
+  { id: 'crystal', emoji: '💎', name: '水晶蛋', burst: ['💠', '🔷', '✨'], trail: '💠' },
+  { id: 'moon', emoji: '🌙', name: '月亮蛋', burst: ['⭐', '🌟', '✨'], trail: '⭐' },
+  { id: 'dragon', emoji: '🐲', name: '龙蛋', burst: ['🔥', '💥', '🐉'], trail: '🔥' },
+  { id: 'poison', emoji: '☠️', name: '毒蛋', burst: ['💀', '🟢', '💚'], trail: '🟢' },
+  { id: 'ice', emoji: '🧊', name: '冰蛋', burst: ['❄️', '🌨️', '💙'], trail: '❄️' },
+  { id: 'magic', emoji: '🔮', name: '魔法蛋', burst: ['✨', '🌀', '⚡'], trail: '🌀' },
 ];
 
 // ── 连击特效配置 ───────────────────────────────────────────
 const COMBO_EFFECTS = [
-  { min: 3,  max: 4,  label: (c) => `⚡ x${c}`,       color: '#ffcd3c', size: '1.6rem' },
-  { min: 5,  max: 7,  label: (c) => `🔥 FIRE x${c}`,  color: '#ff9944', size: '1.9rem' },
-  { min: 8,  max: 11, label: (c) => `💥 BOOM x${c}!`, color: '#ff5599', size: '2.1rem' },
+  { min: 3, max: 4, label: (c) => `⚡ x${c}`, color: '#ffcd3c', size: '1.6rem' },
+  { min: 5, max: 7, label: (c) => `🔥 FIRE x${c}`, color: '#ff9944', size: '1.9rem' },
+  { min: 8, max: 11, label: (c) => `💥 BOOM x${c}!`, color: '#ff5599', size: '2.1rem' },
   { min: 12, max: 17, label: (c) => `🌈 FEVER x${c}!!!`, color: '#aa44ff', size: '2.3rem' },
   { min: 18, max: 99, label: (c) => `🚀 GOD MODE x${c}!!!`, color: '#00eeff', size: '2.6rem' },
 ];
 
 // ── 状态 ─────────────────────────────────────────────────
 let selectedChicken = CHICKENS[0];
-let selectedEgg     = EGGS[0];
-let eggCount        = 0;
-let combo           = 1;
-let bestCombo       = 1;
-let spaceHeld       = false;
-let layTimer        = null;
+let selectedEgg = EGGS[0];
+let eggCount = 0;
+let combo = 1;
+let bestCombo = 1;
+let spaceHeld = false;
+let layTimer = null;
 let comboResetTimer = null;
-const MAX_BASKET    = 120;
-let idleTimer       = null;
+const MAX_BASKET = 120;
+let idleTimer = null;
 
 // ── DOM refs ─────────────────────────────────────────────
-const chickenEmoji  = document.getElementById('chicken-emoji');
-const chickenDisp   = document.getElementById('chicken-display');
-const eggCountEl    = document.getElementById('egg-count');
-const comboEl       = document.getElementById('combo');
-const bestComboEl   = document.getElementById('best-combo');
-const speedLabel    = document.getElementById('speed-label');
-const statusMsg     = document.getElementById('status-msg');
-const basket        = document.getElementById('basket');
-const basketCount   = document.getElementById('basket-count');
-const flashOverlay  = document.getElementById('flash-overlay');
+const chickenEmoji = document.getElementById('chicken-emoji');
+const chickenDisp = document.getElementById('chicken-display');
+const eggCountEl = document.getElementById('egg-count');
+const comboEl = document.getElementById('combo');
+const bestComboEl = document.getElementById('best-combo');
+const speedLabel = document.getElementById('speed-label');
+const statusMsg = document.getElementById('status-msg');
+const basket = document.getElementById('basket');
+const basketCount = document.getElementById('basket-count');
+const flashOverlay = document.getElementById('flash-overlay');
 
 // ── Build Selection UI ────────────────────────────────────
 function buildGrid(items, containerId, type) {
@@ -100,7 +100,7 @@ function buildGrid(items, containerId, type) {
 }
 
 buildGrid(CHICKENS, 'chicken-grid', 'chicken');
-buildGrid(EGGS,     'egg-grid',     'egg');
+buildGrid(EGGS, 'egg-grid', 'egg');
 speedLabel.textContent = msToLabel(selectedChicken.speed);
 
 function msToLabel(ms) {
@@ -138,11 +138,11 @@ function layEgg() {
   // combo-level effects
   const eff = getComboEffect(combo);
   if (eff) spawnComboText(eff);
-  if (combo >= 5)  spawnRing();
+  if (combo >= 5) spawnRing();
   if (combo >= 10) spawnStarBurst();
   if (combo >= 15) screenFlash();
   if (combo >= 18) spawnMegaText();
-  if (combo >= 5)  spawnArcEggs();
+  if (combo >= 5) spawnArcEggs();
 
   addToBasket();
 }
@@ -188,7 +188,7 @@ function spawnFlyingEgg() {
   el.className = 'flying-egg';
   el.textContent = selectedEgg.emoji;
   el.style.left = x + 'px';
-  el.style.top  = y + 'px';
+  el.style.top = y + 'px';
   document.body.appendChild(el);
   el.addEventListener('animationend', () => el.remove());
 }
@@ -202,7 +202,7 @@ function spawnArcEggs() {
       const el = document.createElement('div');
       el.className = 'arc-egg';
       const angle = 120 + i * 60;
-      const dist  = 160 + Math.random() * 80;
+      const dist = 160 + Math.random() * 80;
       const tx = Math.cos(angle * Math.PI / 180) * dist;
       const ty = Math.sin(angle * Math.PI / 180) * dist + 60;
       const rot = (Math.random() - 0.5) * 720;
@@ -223,7 +223,7 @@ function spawnBurst() {
     const el = document.createElement('div');
     el.className = 'burst';
     const angle = (i / count) * 360 + Math.random() * 20;
-    const dist  = 55 + Math.random() * 50;
+    const dist = 55 + Math.random() * 50;
     const dx = Math.cos(angle * Math.PI / 180) * dist;
     const dy = Math.sin(angle * Math.PI / 180) * dist;
     el.style.cssText = `left:${x}px; top:${y}px; --dx:${dx}px; --dy:${dy}px;`;
@@ -239,7 +239,7 @@ function spawnTrail() {
   const { x, y } = getChickenCenter();
   const el = document.createElement('div');
   el.className = 'burst';
-  el.style.cssText = `left:${x + (Math.random()-0.5)*60}px; top:${y+30}px; --dx:${(Math.random()-0.5)*30}px; --dy:${40+Math.random()*40}px; font-size:1rem;`;
+  el.style.cssText = `left:${x + (Math.random() - 0.5) * 60}px; top:${y + 30}px; --dx:${(Math.random() - 0.5) * 30}px; --dy:${40 + Math.random() * 40}px; font-size:1rem;`;
   el.textContent = selectedEgg.trail;
   document.body.appendChild(el);
   el.addEventListener('animationend', () => el.remove());
@@ -263,13 +263,13 @@ function spawnRing() {
 // Radial star burst
 function spawnStarBurst() {
   const { x, y } = getChickenCenter();
-  const stars = ['⭐','💫','✨','🌟'];
+  const stars = ['⭐', '💫', '✨', '🌟'];
   const count = combo >= 18 ? 14 : 8;
   for (let i = 0; i < count; i++) {
     const el = document.createElement('div');
     el.className = 'star-burst';
     const angle = (i / count) * 360;
-    const dist  = 80 + Math.random() * 60;
+    const dist = 80 + Math.random() * 60;
     const dx = Math.cos(angle * Math.PI / 180) * dist;
     const dy = Math.sin(angle * Math.PI / 180) * dist;
     const rot = (Math.random() - 0.5) * 360;
@@ -289,24 +289,23 @@ function screenFlash() {
   setTimeout(() => { flashOverlay.style.opacity = '0'; }, 80);
 }
 
-// Combo floating text
+// Combo floating text — 显示在游戏区右上角，不遮挡小鸡
 function spawnComboText(eff) {
-  const { x, y } = getChickenCenter();
+  const gameRect = document.getElementById('game-area').getBoundingClientRect();
   const el = document.createElement('div');
-  el.className = 'combo-flash';
+  el.className = 'combo-flash combo-flash-corner';
   el.textContent = eff.label(combo);
-  el.style.cssText = `left:${x}px; top:${y - 30}px; color:${eff.color}; font-size:${eff.size}; text-shadow: 0 0 24px ${eff.color}99;`;
+  el.style.cssText = `left:${gameRect.right - 16}px; top:${gameRect.top + 16}px; color:${eff.color}; font-size:${eff.size}; text-shadow: 0 0 24px ${eff.color}99;`;
   document.body.appendChild(el);
   el.addEventListener('animationend', () => el.remove());
 }
 
-// Mega center text for very high combos
+// Mega text — 显示在游戏区右侧，不遮挡小鸡
 function spawnMegaText() {
-  const vw = window.innerWidth / 2;
-  const vh = window.innerHeight / 2;
+  const gameRect = document.getElementById('game-area').getBoundingClientRect();
   const el = document.createElement('div');
   el.className = 'combo-mega';
-  el.style.cssText = `left:${vw}px; top:${vh}px; background: linear-gradient(135deg,#ffcd3c,#ff7eb3); -webkit-background-clip:text; -webkit-text-fill-color:transparent;`;
+  el.style.cssText = `left:${gameRect.right - 20}px; top:${gameRect.top + gameRect.height * 0.25}px; background: linear-gradient(135deg,#ffcd3c,#ff7eb3); -webkit-background-clip:text; -webkit-text-fill-color:transparent;`;
   const texts = ['✨ 神级 ✨', '🔥 无敌 🔥', '🚀 疯狂 🚀', '👑 王者 👑'];
   el.textContent = texts[Math.floor(Math.random() * texts.length)];
   document.body.appendChild(el);
@@ -339,8 +338,9 @@ function stopLaying() {
   spaceHeld = false;
   clearInterval(layTimer);
   layTimer = null;
-  // Reset combo immediately on stop — a pause breaks the streak
-  resetCombo();
+  // 1 秒内重新按下可延续连击，超过 1 秒则归零
+  clearTimeout(comboResetTimer);
+  comboResetTimer = setTimeout(resetCombo, 1000);
   statusMsg.textContent = '按住空格键继续下蛋！';
   triggerAnim(chickenDisp, 'wiggling');
   idleTimer = setTimeout(() => chickenDisp.classList.add('idle'), 400);
@@ -356,7 +356,7 @@ document.addEventListener('keyup', (e) => {
 
 // Touch / mouse on game area
 const gameArea = document.getElementById('game-area');
-gameArea.addEventListener('touchstart',  (e) => { e.preventDefault(); startLaying(); }, { passive: false });
-gameArea.addEventListener('touchend',    (e) => { e.preventDefault(); stopLaying();  }, { passive: false });
-gameArea.addEventListener('mousedown',   (e) => { e.preventDefault(); startLaying(); });
-document.addEventListener('mouseup',     stopLaying);
+gameArea.addEventListener('touchstart', (e) => { e.preventDefault(); startLaying(); }, { passive: false });
+gameArea.addEventListener('touchend', (e) => { e.preventDefault(); stopLaying(); }, { passive: false });
+gameArea.addEventListener('mousedown', (e) => { e.preventDefault(); startLaying(); });
+document.addEventListener('mouseup', stopLaying);
