@@ -300,12 +300,12 @@ function spawnComboText(eff) {
   el.addEventListener('animationend', () => el.remove());
 }
 
-// Mega text — 显示在游戏区右侧，不遮挡小鸡
+// Mega text — 显示在小鸡正下方
 function spawnMegaText() {
-  const gameRect = document.getElementById('game-area').getBoundingClientRect();
+  const { x, y } = getChickenCenter();
   const el = document.createElement('div');
   el.className = 'combo-mega';
-  el.style.cssText = `left:${gameRect.right - 20}px; top:${gameRect.top + gameRect.height * 0.25}px; background: linear-gradient(135deg,#ffcd3c,#ff7eb3); -webkit-background-clip:text; -webkit-text-fill-color:transparent;`;
+  el.style.cssText = `left:${x}px; top:${y + 60}px; background: linear-gradient(135deg,#ffcd3c,#ff7eb3); -webkit-background-clip:text; -webkit-text-fill-color:transparent;`;
   const texts = ['✨ 神级 ✨', '🔥 无敌 🔥', '🚀 疯狂 🚀', '👑 王者 👑'];
   el.textContent = texts[Math.floor(Math.random() * texts.length)];
   document.body.appendChild(el);
