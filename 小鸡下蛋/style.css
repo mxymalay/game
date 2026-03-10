@@ -25,33 +25,40 @@
 html,
 body {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
   font-family: 'Nunito', sans-serif;
   background: var(--bg);
   color: var(--text);
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-image:
     radial-gradient(ellipse at 20% 20%, rgba(126, 232, 250, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 80%, rgba(255, 126, 179, 0.08) 0%, transparent 60%);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #app {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 16px 14px 60px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px 8px;
+  overflow: hidden;
+  min-height: 0;
 }
 
 /* ===== Header ===== */
 header {
   text-align: center;
-  margin-bottom: 14px;
+  margin-bottom: 6px;
+  flex-shrink: 0;
 }
 
 header h1 {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 900;
   background: linear-gradient(135deg, var(--accent1) 0%, var(--accent2) 100%);
   -webkit-background-clip: text;
@@ -62,8 +69,8 @@ header h1 {
 
 .subtitle {
   color: var(--subtext);
-  font-size: 0.88rem;
-  margin-top: 4px;
+  font-size: 0.78rem;
+  margin-top: 2px;
 }
 
 kbd {
@@ -80,9 +87,18 @@ kbd {
 /* ===== Main layout: sidebar + game ===== */
 #main-layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 14px;
-  align-items: start;
+  grid-template-columns: 160px 1fr;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+}
+
+/* right column: game area + basket stacked vertically */
+#main-layout>div:not(.selection-area) {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 /* ===== Selection Area (sidebar) ===== */
@@ -90,6 +106,7 @@ kbd {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow-y: auto;
 }
 
 .selection-panel {
@@ -155,16 +172,17 @@ kbd {
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 30px 20px;
+  padding: 16px 20px;
   text-align: center;
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
-  min-height: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 1;
+  min-height: 0;
 }
 
 #game-area::before {
@@ -201,7 +219,7 @@ kbd {
 }
 
 #chicken-emoji {
-  font-size: clamp(6rem, 15vw, 11rem);
+  font-size: clamp(8rem, 22vh, 18rem);
   line-height: 1;
   display: block;
   transition: transform 0.05s ease;
@@ -548,9 +566,10 @@ kbd {
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 14px;
+  padding: 8px 14px;
   backdrop-filter: blur(10px);
-  margin-top: 14px;
+  margin-top: 8px;
+  flex-shrink: 0;
 }
 
 #basket-title {
