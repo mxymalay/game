@@ -612,22 +612,45 @@ kbd {
   }
 }
 
-/* ===== Responsive ===== */
+/* ===== Responsive (mobile ≤ 700px) ===== */
 @media (max-width: 700px) {
 
-  /* Stack: game area on top, selection below */
+  /* Restore natural scroll — full-screen lock is desktop-only */
+  html,
+  body {
+    overflow: auto !important;
+    height: auto !important;
+  }
+
+  #app {
+    overflow: visible !important;
+    flex: unset !important;
+    padding: 8px 10px 24px;
+  }
+
+  /* Simple single-column stack */
   #main-layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    flex: unset;
+    min-height: unset;
+    align-items: start;
   }
 
-  /* Move selection sidebar after the game column */
+  /* Game area first, selection panels below */
   .selection-area {
     order: 2;
+    overflow: visible;
   }
 
-  #main-layout>div:last-child {
+  #main-layout>div:not(.selection-area) {
     order: 1;
+    display: block;
+  }
+
+  #game-area {
+    min-height: 60vw;
+    flex: unset;
   }
 
   #hud {
@@ -638,11 +661,7 @@ kbd {
     font-size: 1.3rem;
   }
 
-  #game-area {
-    min-height: 300px;
-  }
-
-  /* Collapsible accordion panels on mobile */
+  /* ── Collapsible accordion ── */
   .selection-panel {
     overflow: hidden;
   }
@@ -653,15 +672,17 @@ kbd {
     align-items: center;
     justify-content: space-between;
     user-select: none;
+    -webkit-user-select: none;
     margin-bottom: 0;
-    padding: 4px 2px;
+    padding: 6px 4px;
   }
 
   .selection-panel h2::after {
     content: '▾';
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: transform 0.25s;
     color: var(--accent1);
+    margin-left: 6px;
   }
 
   .selection-panel.collapsed h2::after {
@@ -669,15 +690,15 @@ kbd {
   }
 
   .selection-panel .selection-grid {
-    max-height: 300px;
+    max-height: 400px;
     overflow: hidden;
-    transition: max-height 0.3s ease, margin-top 0.3s ease;
+    transition: max-height 0.35s ease, margin-top 0.35s ease;
     margin-top: 10px;
     grid-template-columns: repeat(4, 1fr);
   }
 
   .selection-panel.collapsed .selection-grid {
-    max-height: 0;
+    max-height: 0 !important;
     margin-top: 0;
   }
 }
