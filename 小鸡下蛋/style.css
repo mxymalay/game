@@ -370,8 +370,50 @@ kbd {
 
 /* ===== Responsive ===== */
 @media (max-width: 700px) {
-  #main-layout { grid-template-columns: 1fr; }
-  .selection-grid { grid-template-columns: repeat(4, 1fr); }
-  #hud { gap: 16px; }
-  #game-area { min-height: 340px; }
+  /* Stack: game area on top, selection below */
+  #main-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  /* Move selection sidebar after the game column */
+  .selection-area { order: 2; }
+  #main-layout > div:last-child { order: 1; }
+
+  #hud { gap: 12px; }
+  #hud .hud-value { font-size: 1.3rem; }
+  #game-area { min-height: 300px; }
+
+  /* Collapsible accordion panels on mobile */
+  .selection-panel {
+    overflow: hidden;
+  }
+  .selection-panel h2 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    margin-bottom: 0;
+    padding: 4px 2px;
+  }
+  .selection-panel h2::after {
+    content: '▾';
+    font-size: 1rem;
+    transition: transform 0.25s;
+    color: var(--accent1);
+  }
+  .selection-panel.collapsed h2::after {
+    transform: rotate(-90deg);
+  }
+  .selection-panel .selection-grid {
+    max-height: 300px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+    margin-top: 10px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .selection-panel.collapsed .selection-grid {
+    max-height: 0;
+    margin-top: 0;
+  }
 }

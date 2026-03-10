@@ -150,6 +150,8 @@ function layEgg() {
 function resetCombo() {
   combo = 1;
   comboEl.textContent = 'x1';
+  clearTimeout(comboResetTimer);
+  comboResetTimer = null;
 }
 
 function bumpCombo() {
@@ -337,6 +339,8 @@ function stopLaying() {
   spaceHeld = false;
   clearInterval(layTimer);
   layTimer = null;
+  // Reset combo immediately on stop — a pause breaks the streak
+  resetCombo();
   statusMsg.textContent = '按住空格键继续下蛋！';
   triggerAnim(chickenDisp, 'wiggling');
   idleTimer = setTimeout(() => chickenDisp.classList.add('idle'), 400);

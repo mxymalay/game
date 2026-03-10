@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🐣 小鸡下蛋</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div id="app">
     <!-- Header -->
@@ -19,12 +21,12 @@
 
       <!-- Left sidebar: selection panels -->
       <div class="selection-area">
-        <div class="selection-panel" id="chicken-panel">
-          <h2>🐔 选择小鸡</h2>
+        <div class="selection-panel collapsed" id="chicken-panel">
+          <h2 id="chicken-panel-toggle">🐔 选择小鸡</h2>
           <div class="selection-grid" id="chicken-grid"></div>
         </div>
-        <div class="selection-panel" id="egg-panel">
-          <h2>🥚 选择蛋的种类</h2>
+        <div class="selection-panel collapsed" id="egg-panel">
+          <h2 id="egg-panel-toggle">🥚 选择蛋的种类</h2>
           <div class="selection-grid" id="egg-grid"></div>
         </div>
       </div>
@@ -76,5 +78,25 @@
   <div id="flash-overlay"></div>
 
   <script src="game.js"></script>
+  <script>
+    // Accordion toggle for mobile selection panels
+    ['chicken-panel', 'egg-panel'].forEach(id => {
+      const panel = document.getElementById(id);
+      const h2 = panel.querySelector('h2');
+      h2.addEventListener('click', () => {
+        // On desktop (> 700px) do nothing — panels are always open
+        if (window.innerWidth > 700) return;
+        panel.classList.toggle('collapsed');
+      });
+    });
+    // On desktop, make sure panels are not collapsed
+    function ensureDesktopState() {
+      if (window.innerWidth > 700) {
+        document.querySelectorAll('.selection-panel').forEach(p => p.classList.remove('collapsed'));
+      }
+    }
+    window.addEventListener('resize', ensureDesktopState);
+  </script>
 </body>
+
 </html>
